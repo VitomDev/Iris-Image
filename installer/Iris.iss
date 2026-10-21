@@ -1,4 +1,4 @@
-; Iris installer (Inno Setup 6).
+; Iris Image installer (Inno Setup 6).
 ;
 ; Context menu registration:
 ;  - Windows 11: a sparse package (Iris.msix) gives Iris the identity the
@@ -10,7 +10,7 @@
 ;
 ; Built by build.ps1, which passes /DBuildDir=<folder with the binaries>.
 
-#define AppVersion "1.0.0"
+#define AppVersion "1.0.1"
 #define Clsid "{{4D8C2E61-7A3B-4F0E-9C15-2B6E8A1D3F47}"
 #define PackageName "Iris.ImageConverter"
 
@@ -20,25 +20,25 @@
 
 [Setup]
 AppId={{9B3E5C1A-2F4D-4E8B-A6C7-1D0F3E5B7A92}
-AppName=Iris
-AppVerName=Iris {#AppVersion}
+AppName=Iris Image
+AppVerName=Iris Image {#AppVersion}
 AppVersion={#AppVersion}
 AppPublisher=Victor Escos Batalla
-AppPublisherURL=https://github.com/VitomDev/Iris
-AppSupportURL=https://github.com/VitomDev/Iris/issues
+AppPublisherURL=https://github.com/VitomDev/Iris-Image
+AppSupportURL=https://github.com/VitomDev/Iris-Image/issues
 VersionInfoVersion={#AppVersion}
-VersionInfoDescription=Iris - Instant Image Converter Setup
-DefaultDirName={autopf}\Iris
+VersionInfoDescription=Iris Image - Instant Image Converter Setup
+DefaultDirName={autopf}\Iris Image
 DisableProgramGroupPage=yes
 DisableReadyPage=yes
 PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0.17763
-OutputBaseFilename=IrisSetup
+OutputBaseFilename=IrisImageSetup
 SetupIconFile=..\assets\iris.ico
 UninstallDisplayIcon={app}\Iris.exe
-UninstallDisplayName=Iris - Instant Image Converter
+UninstallDisplayName=Iris Image - Instant Image Converter
 Compression=lzma2/max
 SolidCompression=yes
 WizardStyle=modern
@@ -57,7 +57,7 @@ Source: "..\THIRD-PARTY-NOTICES.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Code]
 const
-  MenuTitle = 'Iris ' + #$2014 + ' Convert to...';
+  MenuTitle = 'Iris Image ' + #$2014 + ' Convert to...';
   VerbKey = 'IrisConvert';
 
 var
@@ -106,7 +106,7 @@ var
   Key: String;
 begin
   Key := 'Software\Classes\CLSID\{#Clsid}';
-  RegWriteStringValue(HKLM, Key, '', 'Iris context menu');
+  RegWriteStringValue(HKLM, Key, '', 'Iris Image context menu');
   RegWriteStringValue(HKLM, Key + '\InprocServer32', '', ExpandConstant('{app}\IrisShell.dll'));
   RegWriteStringValue(HKLM, Key + '\InprocServer32', 'ThreadingModel', 'Apartment');
   for I := 0 to GetArrayLength(Extensions) - 1 do

@@ -1,15 +1,15 @@
-<p align="center"><img src="assets/iris.png" width="96" alt="Iris"></p>
+<p align="center"><img src="assets/iris.png" width="96" alt="Iris Image"></p>
 
-# Iris — Instant Image Converter
+# Iris Image — Instant Image Converter
 
-[![Build](https://github.com/VitomDev/Iris/actions/workflows/build.yml/badge.svg)](https://github.com/VitomDev/Iris/actions/workflows/build.yml)
+[![Build](https://github.com/VitomDev/Iris-Image/actions/workflows/build.yml/badge.svg)](https://github.com/VitomDev/Iris-Image/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Convert images straight from the Windows File Explorer context menu. Right-click
-an image, choose **Iris — Convert to...** and a format, and the converted copy
+an image, choose **Iris Image — Convert to...** and a format, and the converted copy
 appears next to the original.
 
-No windows, no settings, no background processes. Iris only runs while it is
+No windows, no settings, no background processes. Iris Image only runs while it is
 converting, then exits.
 
 ## Features
@@ -39,7 +39,7 @@ converting, then exits.
 | TIFF   | ✓ | ✓ | Lossless ZIP compression. |
 | ICO    | ✓ | ✓ | Multi-size icon: 16, 24, 32, 48, 64, 128 and 256 px (never upscaled). |
 
-**Animations and multi-page files.** Iris converts the first frame of animated
+**Animations and multi-page files.** Iris Image converts the first frame of animated
 GIF and WebP files and the first page of multi-page TIFF files. When reading an
 icon, it uses the largest image in it.
 
@@ -54,15 +54,15 @@ the target format are skipped rather than recompressed.
 
 ## Install
 
-1. Download `IrisSetup.exe` from the [latest release](https://github.com/VitomDev/Iris/releases/latest).
+1. Download `IrisImageSetup.exe` from the [latest release](https://github.com/VitomDev/Iris-Image/releases/latest).
 2. Run it and follow the short wizard.
 
-That is all. To uninstall, use **Settings → Apps → Installed apps → Iris**.
+That is all. To uninstall, use **Settings → Apps → Installed apps → Iris Image**.
 
 ## Usage
 
 1. Right-click one or more images in File Explorer.
-2. Choose **Iris — Convert to...** and pick a format.
+2. Choose **Iris Image — Convert to...** and pick a format.
 
 The new files appear in the same folder. If something goes wrong (a damaged
 file, a read-only folder, a full disk) a single Windows notification explains
@@ -77,10 +77,10 @@ Iris.exe convert <png|jpg|webp|bmp|gif|tiff|ico> <image>...
 ## Why administrator rights?
 
 The Windows 11 context menu only shows entries from apps that have a *package
-identity*. Iris gets one from a small sparse package that contains no code.
+identity*. Iris Image gets one from a small sparse package that contains no code.
 Windows only accepts such a package without a paid code-signing certificate
 when it is installed by an administrator. On Windows 10, or if the package
-cannot be registered, Iris uses the classic context menu instead (on Windows 11
+cannot be registered, Iris Image uses the classic context menu instead (on Windows 11
 it then appears under **Show more options**).
 
 ## How it works
@@ -109,7 +109,7 @@ Requirements:
 
 The script downloads pinned, hash-checked copies of the Windows SDK (from NuGet)
 and libwebp into `.deps/`, builds everything, runs the tests and writes the
-installer to `dist/IrisSetup.exe`. Use `-SkipTests` or `-SkipInstaller` to
+installer to `dist/IrisImageSetup.exe`. Use `-SkipTests` or `-SkipInstaller` to
 shorten it.
 
 To run the tests on their own:
@@ -131,6 +131,6 @@ tests/        Automated tests
 
 ## License
 
-Iris is released under the [MIT License](LICENSE). It includes libwebp, which is
+Iris Image is released under the [MIT License](LICENSE). It includes libwebp, which is
 distributed under the BSD 3-Clause License; see
 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).

@@ -46,7 +46,7 @@ void ShowNotification(const std::wstring& title, const std::wstring& message) {
     windowClass.hInstance = instance;
     windowClass.lpszClassName = L"IrisNotification";
     RegisterClassExW(&windowClass);
-    const HWND window = CreateWindowExW(0, windowClass.lpszClassName, L"Iris", 0, 0, 0, 0, 0,
+    const HWND window = CreateWindowExW(0, windowClass.lpszClassName, L"Iris Image", 0, 0, 0, 0, 0,
                                         HWND_MESSAGE, nullptr, instance, nullptr);
     if (!window) return;
 
@@ -59,7 +59,7 @@ void ShowNotification(const std::wstring& title, const std::wstring& message) {
                                                GetSystemMetrics(SM_CXSMICON),
                                                GetSystemMetrics(SM_CYSMICON), 0));
     data.dwInfoFlags = NIIF_WARNING | NIIF_RESPECT_QUIET_TIME;
-    lstrcpyW(data.szTip, L"Iris");
+    lstrcpyW(data.szTip, L"Iris Image");
     CopyTruncated(data.szInfoTitle, ARRAYSIZE(data.szInfoTitle), title);
     CopyTruncated(data.szInfo, ARRAYSIZE(data.szInfo), message);
 

@@ -1,4 +1,4 @@
-// IrisShell.dll: the "Iris — Convert to..." Explorer command.
+// IrisShell.dll: the "Iris Image — Convert to..." Explorer command.
 //
 // This code runs inside explorer.exe, so it does as little as possible: it
 // reads the selected paths and starts Iris.exe, which does the actual work in
@@ -27,7 +27,7 @@ extern "C" IMAGE_DOS_HEADER __ImageBase;
 
 namespace {
 
-constexpr wchar_t kMenuTitle[] = L"Iris \x2014 Convert to...";
+constexpr wchar_t kMenuTitle[] = L"Iris Image \x2014 Convert to...";
 // Above this many selected items, skip the same-format check to keep the menu fast.
 constexpr DWORD kMaxItemsToInspect = 512;
 // CreateProcess accepts 32767 characters; longer selections go through a file.

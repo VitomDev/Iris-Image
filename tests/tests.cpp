@@ -793,7 +793,7 @@ EXPCMDSTATE State(IExplorerCommand* command, IShellItemArray* items) {
 TEST(ShellMenuStructure) {
     if (g_worker.empty()) return;
     const ComPtr<IExplorerCommand> root = LoadRootCommand();
-    CHECK(Title(root.Get()) == L"Iris \x2014 Convert to...");
+    CHECK(Title(root.Get()) == L"Iris Image \x2014 Convert to...");
     EXPCMDFLAGS flags = 0;
     CHECK_HR(root->GetFlags(&flags));
     CHECK(flags & ECF_HASSUBCOMMANDS);

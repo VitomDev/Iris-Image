@@ -35,8 +35,8 @@ jobs:
       - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
-          name: IrisSetup
-          path: dist/IrisSetup.exe
+          name: IrisImageSetup
+          path: dist/IrisImageSetup.exe
           if-no-files-found: error
 
       - name: Upload binaries

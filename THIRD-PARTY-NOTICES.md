@@ -1,6 +1,6 @@
 # Third-party notices
 
-Iris includes the following third-party software.
+Iris Image includes the following third-party software.
 
 ## libwebp 1.6.0
 

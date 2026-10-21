@@ -1,5 +1,5 @@
 # Builds Iris: libwebp, Iris.exe, IrisShell.dll, the tests, the sparse package
-# and the IrisSetup.exe installer.
+# and the IrisImageSetup.exe installer.
 #
 #   .\build.ps1                 Build everything and run the tests.
 #   .\build.ps1 -SkipTests      Build without running the tests.
@@ -118,5 +118,5 @@ if (-not $SkipInstaller) {
     if (-not $iscc) { throw 'Inno Setup 6 was not found.' }
     New-Item -ItemType Directory -Force $dist | Out-Null
     Invoke-Tool $iscc /Q "/DBuildDir=$out" "/O$dist" (Join-Path $root 'installer\Iris.iss')
-    Write-Host "Installer: $dist\IrisSetup.exe"
+    Write-Host "Installer: $dist\IrisImageSetup.exe"
 }
