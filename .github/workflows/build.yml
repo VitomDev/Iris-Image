@@ -1,0 +1,50 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: .deps
+          key: deps-${{ hashFiles('scripts/fetch-deps.ps1') }}
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe")) {
+            choco install innosetup --version=6.4.3 --no-progress -y
+          }
+
+      - name: Build and test
+        shell: pwsh
+        run: ./build.ps1
+
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: IrisSetup
+          path: dist/IrisSetup.exe
+          if-no-files-found: error
+
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: Iris-binaries
+          path: |
+            build/Iris.exe
+            build/IrisShell.dll
+            build/Iris.msix
+          if-no-files-found: error

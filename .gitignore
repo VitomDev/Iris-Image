@@ -1,0 +1,11 @@
+# Downloaded dependencies and build output
+.deps/
+build/
+dist/
+
+# Editors and tools
+.vs/
+.vscode/
+.idea/
+*.user
+.claude/

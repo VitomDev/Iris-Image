@@ -1,0 +1,6 @@
+#pragma once
+
+#define IRIS_VERSION_MAJOR 1
+#define IRIS_VERSION_MINOR 0
+#define IRIS_VERSION_PATCH 0
+#define IRIS_VERSION_STRING "1.0.0"
