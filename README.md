@@ -144,4 +144,4 @@ Iris Image is released under the [MIT License](LICENSE). It includes libwebp, di
 
 ## 🧑‍💻 Author
 
-**Víctor Escós Batalla**
+**VitomDev**
