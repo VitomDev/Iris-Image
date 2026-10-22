@@ -12,11 +12,11 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "Victor Escos Batalla"
+            VALUE "CompanyName", "VitomDev"
             VALUE "FileDescription", "Iris Image Explorer context menu"
             VALUE "FileVersion", IRIS_VERSION_STRING
             VALUE "InternalName", "IrisShell"
-            VALUE "LegalCopyright", "Copyright (c) 2026 Victor Escos Batalla. MIT License."
+            VALUE "LegalCopyright", "Copyright (c) 2026 VitomDev. MIT License."
             VALUE "OriginalFilename", "IrisShell.dll"
             VALUE "ProductName", "Iris Image"
             VALUE "ProductVersion", IRIS_VERSION_STRING

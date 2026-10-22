@@ -26,7 +26,7 @@
 
   <Properties>
     <DisplayName>Iris Image</DisplayName>
-    <PublisherDisplayName>Victor Escos Batalla</PublisherDisplayName>
+    <PublisherDisplayName>VitomDev</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
     <uap10:AllowExternalContent>true</uap10:AllowExternalContent>
   </Properties>
