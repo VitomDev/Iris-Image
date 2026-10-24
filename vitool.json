@@ -1,0 +1,9 @@
+{
+  "appId": "{9B3E5C1A-2F4D-4E8B-A6C7-1D0F3E5B7A92}",
+  "name": "Iris Image",
+  "category": "Images",
+  "icon": "assets/iris.png",
+  "screenshots": [],
+  "installer": "IrisImageSetup.exe",
+  "exe": "Iris.exe"
+}
