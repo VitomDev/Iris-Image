@@ -46,11 +46,13 @@ No windows, no settings, no background processes. Iris Image only runs while it 
 
 ## 📦 Install
 
-1. Download `IrisImageSetup.exe` from the [latest release](https://github.com/VitomDev/Iris-Image/releases/latest).
-2. Run it and follow the short wizard.
+Download `IrisImageSetup.exe` from [Releases](https://github.com/VitomDev/Iris-Image/releases/latest) and run it.
 
-Requires Windows 10 version 1809 or later, or Windows 11 (x64).  
-To uninstall: **Settings → Apps → Installed apps → Iris Image**.
+> 🧰 **Recommended:** install it with [Vitool Box](https://github.com/VitomDev/Vitool-Box), which keeps all VitomDev apps in one place and installs or removes them with a switch.
+
+- Asks for administrator rights once, to add Iris Image to the Windows 11 context menu (see below)
+
+Uninstalling (Settings → Apps) removes Iris Image and its context menu entries.
 
 ### 🔐 Why does it ask for administrator rights?
 
@@ -117,11 +119,32 @@ tests/        Automated tests
 
 ---
 
+## 📚 Dependencies
+
+- [Windows Imaging Component](https://learn.microsoft.com/windows/win32/wic/-wic-about-windows-imaging-codec) — reading and writing images, built into Windows
+- [libwebp](https://github.com/webmproject/libwebp) — WebP images
+
+See [third-party notices](THIRD-PARTY-NOTICES.md) for licenses.
+
+---
+
+## 🪟 Compatibility
+
+Windows 10 (version 1809 or newer) and Windows 11, 64-bit.
+
+---
+
 ## 🧪 Project Status
 
-✅ Version 1.0 released.  
-This project is fully functional and ready to use.
-Bug reports and suggestions are welcome on the [issues](https://github.com/VitomDev/Iris-Image/issues) page.
+✅ Stable.  
+This project is fully functional as-is and ready to use.
+Future updates to improve features or the interface are not ruled out.
+
+---
+
+## 📄 License
+
+[MIT](LICENSE) © VitomDev
 
 ---
 
@@ -133,15 +156,3 @@ Feel free to reach out or follow me:
 - 🐦 Twitter/X: [@VitomDev](https://twitter.com/VitomDev)
 - 🎮 Twitch: [@VitomDev](https://www.twitch.tv/VitomDev)
 - 💼 LinkedIn: [VitomDev](https://www.linkedin.com/in/víctor-escós-batalla/)
-
----
-
-## 📄 License
-
-Iris Image is released under the [MIT License](LICENSE). It includes libwebp, distributed under the BSD 3-Clause License; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
-
----
-
-## 🧑‍💻 Author
-
-**VitomDev**
