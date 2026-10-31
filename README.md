@@ -2,7 +2,6 @@
 
 # 👁️ Iris Image — Instant Image Converter
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build](https://github.com/VitomDev/Iris-Image/actions/workflows/build.yml/badge.svg)](https://github.com/VitomDev/Iris-Image/actions/workflows/build.yml)
 
 Convert images straight from the Windows File Explorer context menu. 🖱️  
 Right-click an image, choose **Iris Image — Convert to...** and a format, and the converted copy appears next to the original. That's it.
