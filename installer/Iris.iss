@@ -10,7 +10,7 @@
 ;
 ; Built by build.ps1, which passes /DBuildDir=<folder with the binaries>.
 
-#define AppVersion "1.0.1"
+#define AppVersion "1.0.2"
 #define Clsid "{{4D8C2E61-7A3B-4F0E-9C15-2B6E8A1D3F47}"
 #define PackageName "Iris.ImageConverter"
 
@@ -47,6 +47,10 @@ ChangesAssociations=yes
 CloseApplications=no
 RestartIfNeededByRun=no
 LicenseFile=..\LICENSE
+
+[Messages]
+; Shown above the license on the wizard's license page.
+LicenseLabel3=Iris is free and open source. If you paid for it, you were scammed: the official download is only at github.com/VitomDev. Please read the license below and accept it to continue.
 
 [Files]
 Source: "{#BuildDir}\Iris.exe"; DestDir: "{app}"; Flags: ignoreversion
